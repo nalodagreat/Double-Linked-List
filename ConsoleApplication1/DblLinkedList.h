@@ -23,8 +23,12 @@ public:
 		newNode->value = value;
 		newNode->next = head;
 		newNode->prev = NULL;
-		
+		if (head != NULL)
+		{
+			head->prev = newNode;
+		}
 		head = newNode;
+		
 	}
 	void insertAtEnd(T value)
 	{
@@ -72,7 +76,7 @@ public:
 		if (head == NULL)
 			return NULL;
 		Node* current = head;
-		while (current->next!=NULL)
+		while (current!=NULL)
 		{
 			if (current->value == value)
 				return current;
