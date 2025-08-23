@@ -79,5 +79,40 @@ public:
 		}
 		return NULL;
 	}
+
+	void deleteFirstNode()
+	{
+		//Head-1-2-NULL
+		if (head == NULL)
+			return;
+		Node* current = head;
+		head = current->next;
+
+		if (current->next != NULL)
+
+			current->next->prev = NULL;
+		delete current;
+	}
+	void deleteLastNode()
+	{
+		//head-1-2-null
+		if (head == NULL)
+			return;
+		Node* current = head;
+		while (current->next != NULL)
+		{
+			current = current->next;
+		}
+		if (current->prev == NULL)
+		{
+			delete head;
+			head = NULL;
+			return;
+		}
+		
+			current->prev->next = NULL;
+		
+		delete current;
+	}
 };
 
