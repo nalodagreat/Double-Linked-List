@@ -166,5 +166,12 @@ public:
 	{
 		return (_size == 0);
 	}
+	void clear()
+	{
+		while (size > 0)
+		{
+			deleteFirstNode();
+		}
+	}
 };
 
