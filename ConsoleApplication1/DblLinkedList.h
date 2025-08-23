@@ -6,6 +6,7 @@ using namespace std;
 template <class T>
 class DblLinkedList
 {
+	int _size = 0;
 public:
 
 	class Node
@@ -16,6 +17,7 @@ public:
 		Node* next;
 	};
 	Node* head = NULL;
+
 	void insertAtBegining(T value)
 	{
 		//head-1-2-3-null
@@ -28,7 +30,7 @@ public:
 			head->prev = newNode;
 		}
 		head = newNode;
-		
+		_size++;
 	}
 	void insertAtEnd(T value)
 	{
@@ -50,6 +52,7 @@ public:
 		}
 		current->next = newNode;
 		newNode->prev = current;
+		_size++;
 	}
 	void insertAfter(Node* preevious, T value)
 	{
@@ -70,6 +73,7 @@ public:
 			preevious->next->prev = newNode;
 		}
 		preevious->next = newNode;
+		_size++;
 	}
 	Node * find(T value)
 	{
@@ -97,6 +101,7 @@ public:
 
 			current->next->prev = NULL;
 		delete current;
+		_size--;
 	}
 	void deleteLastNode()
 	{
@@ -118,6 +123,7 @@ public:
 			current->prev->next = NULL;
 		
 		delete current;
+		_size--;
 	}
 	void deleteNode(Node* nodeToDelete)
 	{
@@ -139,6 +145,7 @@ public:
 		}
 		
 		delete nodeToDelete;
+		_size--;
 	}
 	void printList()
 	{
@@ -148,6 +155,12 @@ public:
 			cout << current->value<<" ";
 			current = current->next;
 		}
+		
+	}
+	int size()
+	{
+		return _size;
+
 	}
 
 };
