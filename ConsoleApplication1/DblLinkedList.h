@@ -135,6 +135,15 @@ public:
 		
 		delete nodeToDelete;
 	}
+	void printList()
+	{
+		Node* current = head;
+		while (current->next != NULL)
+		{
+			cout << current->value<<" ";
+			current = current->next;
+		}
+	}
 
 };
 
