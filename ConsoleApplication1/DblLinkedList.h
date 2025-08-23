@@ -114,5 +114,27 @@ public:
 		
 		delete current;
 	}
+	void deleteNode(Node* nodeToDelete)
+	{
+		//-head-1-2-3-null
+		if (head == NULL)
+			return;
+		if (nodeToDelete->prev == NULL)
+		{
+			head = nodeToDelete->next;
+		}
+
+		if (nodeToDelete->prev != NULL)
+		{
+			nodeToDelete->prev->next = nodeToDelete->next;
+		}
+		if (nodeToDelete->next != NULL)
+		{
+			nodeToDelete->next->prev = nodeToDelete->prev;
+		}
+		
+		delete nodeToDelete;
+	}
+
 };
 
