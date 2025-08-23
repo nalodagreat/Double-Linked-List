@@ -10,6 +10,7 @@ public:
 
 	class Node
 	{
+	public:
 		Node* prev;
 		T value;
 		Node* next;
@@ -138,7 +139,7 @@ public:
 	void printList()
 	{
 		Node* current = head;
-		while (current->next != NULL)
+		while (current != NULL)
 		{
 			cout << current->value<<" ";
 			current = current->next;
