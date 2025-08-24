@@ -56,9 +56,9 @@ int main()
 	dbllLinkedList.printList();
 
 	DblLinkedList<int>::Node* N = dbllLinkedList.GetNode(3);
-	cout << "\nlist value with index 2:\n";
+	cout << "\nlist value with index 2:";
 	if(N!=NULL)
-		cout<<N->value;
+		cout<<N->value<<endl;
 	else
 		cout << "is NULL\n";
 	cout << "Item with index 1 is: " << dbllLinkedList.getItem(1) << endl;
