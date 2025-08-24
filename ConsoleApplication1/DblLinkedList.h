@@ -190,5 +190,24 @@ public:
 		if(temp!=NULL)
 		head = temp->prev;
 	}
+	Node* GetNode(short givenIndex)
+	{
+		short index = 0;
+		if (head == NULL|| givenIndex<0 || givenIndex>_size-1)
+		{
+			return NULL;
+		}
+		Node* current = head;
+		while (current != NULL)
+		{
+			if (index == givenIndex)
+			{
+				return current;
+			}
+			index++;
+			current = current->next;
+		}
+		return NULL;
+	}
 };
 
