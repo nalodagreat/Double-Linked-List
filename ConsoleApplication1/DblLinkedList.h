@@ -168,10 +168,27 @@ public:
 	}
 	void clear()
 	{
-		while (size > 0)
+		while (_size > 0)
 		{
 			deleteFirstNode();
 		}
+	}
+	void reverse()
+	{
+		//head-1-2-3  , 3-2-1temp =current->next
+		if (_size == 0)
+			return;
+		Node* temp = NULL;
+		Node* current = head;
+		while (current != NULL)
+		{
+			temp = current->prev;
+			current->prev = current->next;
+			current->next=temp;
+			current = current->prev;
+		}
+		if(temp!=NULL)
+		head = temp->prev;
 	}
 };
 
