@@ -213,7 +213,7 @@ public:
 	{
 		Node *NodeItem = GetNode(itemIndex);
 		if (NodeItem == NULL)
-			return -1;
+			return NULL;
 		else
 		{
 			return NodeItem->value;
