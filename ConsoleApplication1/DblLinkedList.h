@@ -219,5 +219,15 @@ public:
 			return NodeItem->value;
 		}
 	}
+	bool upadateItem(int itemIndex, T newValue)
+	{
+		Node* itemToUpdate = GetNode(itemIndex);
+		if(itemToUpdate!=NULL)
+		{
+			itemToUpdate->value = newValue;
+			return true;
+		}
+		return false;
+	}
 };
 
