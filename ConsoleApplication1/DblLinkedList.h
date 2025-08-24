@@ -229,5 +229,16 @@ public:
 		}
 		return false;
 	}
+	bool insertAfter(int itemIndex, T value)
+	{//insertAfter an index not a node
+		//head-1-2-3-null
+		Node *nodeToAddAfter=GetNode(itemIndex);
+		if(nodeToAddAfter!=NULL)
+		{
+			insertAfter(nodeToAddAfter, value);
+			return true;
+		}
+		return false;
+	}
 };
 
