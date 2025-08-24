@@ -190,7 +190,7 @@ public:
 		if(temp!=NULL)
 		head = temp->prev;
 	}
-	Node* GetNode(short givenIndex)
+	Node* GetNode(int givenIndex)
 	{
 		short index = 0;
 		if (head == NULL|| givenIndex<0 || givenIndex>_size-1)
@@ -208,6 +208,16 @@ public:
 			current = current->next;
 		}
 		return NULL;
+	}
+	T getItem(int itemIndex)
+	{
+		Node *NodeItem = GetNode(itemIndex);
+		if (NodeItem == NULL)
+			return -1;
+		else
+		{
+			return NodeItem->value;
+		}
 	}
 };
 
