@@ -43,6 +43,7 @@ public:
 		{
 			newNode->prev = NULL;
 			head = newNode;
+			_size++;
 			return;
 		}
 		Node* current = head;
