@@ -7,7 +7,14 @@ protected:
 	DblLinkedList _list;
 	
 public:
-
+	void push(T value)
+	{
+		_list.insertAtEnd(value);
+	}
+	void pop()
+	{
+		_list.deleteFirstNode();
+	}
 	
 
 };
