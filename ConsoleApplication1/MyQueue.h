@@ -50,6 +50,14 @@ public:
 	{
 		_list.upadateItem(index, newValue);
 	}
+	void insertAtFront(T value)
+	{
+		_list.insertAtBegining(value);
+	}
+	void insertAtBack(T value)
+	{
+		_list.insertAtEnd(value);
+	}
 	
 };
 
