@@ -58,6 +58,9 @@ public:
 	{
 		_list.insertAtEnd(value);
 	}
-	
+	void clear()
+	{
+		_list.clear();
+	}
 };
 
