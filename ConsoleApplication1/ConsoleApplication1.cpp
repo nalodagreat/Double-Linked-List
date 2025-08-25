@@ -1,11 +1,15 @@
 #include<iostream>
 #include<string>
 #include <vector>
-#include <iostream>
+#include "MyQueue.h"
 #include "DblLinkedList.h"
 using namespace std;
 int main()
 {
+	cout << "-----------------------------------------------------------------------------\n"
+		<< "\t\t\t\t\tDOUBLE LINKED LIST\n";
+
+	cout << "-----------------------------------------------------------------------------\n\n";
 	DblLinkedList <int> dbllLinkedList;
 	dbllLinkedList.insertAtBegining(1);
 	dbllLinkedList.insertAtBegining(2);
@@ -66,7 +70,25 @@ int main()
 	{
 		cout << "new list content after updating value of Item with index 1 is: ";
 		dbllLinkedList.printList();
+
 	}
+	cout << "\n\n-----------------------------------------------------------------------------\n"
+		<< "\t\t\t\t\t\QUEUE\n";
+
+	cout << "-----------------------------------------------------------------------------\n\n";
+	MyQueue <int> queue;
+	queue.push(10);
+	queue.push(20);
+	queue.push(30);
+	queue.push(40);
+	cout << "the Queue content\n";
+	queue.print();
+	cout << "\n Queue size: " << queue.size()<<endl;
+	cout << "Queue front: " << queue.front()<<endl;
+	cout << "Queue back: " << queue.back()<<endl;
+	queue.pop();
+	cout << "After pop()" <<  endl;
+	queue.print();
 	
 
 	return 0;
