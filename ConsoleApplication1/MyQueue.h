@@ -4,7 +4,7 @@ template <class T>
 class MyQueue
 {
 protected:
-	DblLinkedList _list;
+	DblLinkedList <T> _list;
 	
 public:
 	void push(T value)
@@ -20,6 +20,11 @@ public:
 	{
 		return _list.size();
 	}
+	void print()
+	{
+		_list.printList();
+
+	}
 	T front()
 	{
 		return _list.getItem(0);
@@ -28,7 +33,10 @@ public:
 	{
 		return _list.getItem(size()-1);
 	}
+	bool isEmpty()
+	{
+		return _list.isEmpty();
+	}
 	
-
 };
 
