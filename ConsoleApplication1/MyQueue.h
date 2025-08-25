@@ -62,5 +62,9 @@ public:
 	{
 		_list.clear();
 	}
+	void insertAfter(int index,T value)
+	{
+		_list.insertAfter(index, value);
+	}
 };
 
