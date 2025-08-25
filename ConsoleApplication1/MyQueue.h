@@ -15,6 +15,19 @@ public:
 	{
 		_list.deleteFirstNode();
 	}
+
+	int size()
+	{
+		return _list.size();
+	}
+	T front()
+	{
+		return _list.getItem(0);
+	}
+	T back()
+	{
+		return _list.getItem(size()-1);
+	}
 	
 
 };
