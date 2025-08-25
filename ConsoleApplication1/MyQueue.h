@@ -37,6 +37,19 @@ public:
 	{
 		return _list.isEmpty();
 	}
+	T getItem(int index)
+	{
+		return _list.getItem(index);
+	}
+	void reverse()
+	{
+		_list.reverse();
+	}
+
+	void updateItem(int index, T newValue)
+	{
+		_list.upadateItem(index, newValue);
+	}
 	
 };
 
