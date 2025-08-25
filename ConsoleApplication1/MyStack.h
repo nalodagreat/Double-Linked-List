@@ -5,7 +5,7 @@
 using namespace std;
 template <class T>
 
-class  clsMyStack:public MyQueue <T>
+class MyStack:public MyQueue <T>
 {
 
 public :
@@ -26,6 +26,7 @@ public :
 		return MyQueue <T>::back();
 
 	}
+	//now since MyStack extend DblLinkedlist we can acceess to all it s 3 extension without rewriting it
 	
 };
 
